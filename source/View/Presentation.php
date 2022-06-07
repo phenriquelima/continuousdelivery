@@ -1,6 +1,6 @@
 <?php
 
-namespace Source\View;
+namespace PHenriqueLima\ContinuousDelivery\View;
 
 
 class Presentation

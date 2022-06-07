@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Source\Infra\Contracts;
+namespace PHenriqueLima\ContinuousDelivery\Infra\Contracts;
 
 interface IDependencyManager
 {

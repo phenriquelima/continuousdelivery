@@ -1,11 +1,11 @@
 <?php
 
-namespace Source\Controller;
+namespace PHenriqueLima\ContinuousDelivery\Controller;
 
-use Source\Infra\DatabaseMigrations;
-use Source\Infra\DependencyManager;
-use Source\Infra\UpdateRepository;
-use Source\View\Presentation;
+use PHenriqueLima\ContinuousDelivery\Infra\DatabaseMigrations;
+use PHenriqueLima\ContinuousDelivery\Infra\DependencyManager;
+use PHenriqueLima\ContinuousDelivery\Infra\UpdateRepository;
+use PHenriqueLima\ContinuousDelivery\View\Presentation;
 
 class ContinuousDelivery
 {

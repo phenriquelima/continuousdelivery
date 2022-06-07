@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Source\Infra;
+namespace PHenriqueLima\ContinuousDelivery\Infra;
 
-use Source\Controller\ContinuousDelivery;
-use Source\Infra\Contracts\IDatabaseMigrations;
+use PHenriqueLima\ContinuousDelivery\Controller\ContinuousDelivery;
+use PHenriqueLima\ContinuousDelivery\Infra\Contracts\IDatabaseMigrations;
 
 class DatabaseMigrations implements IDatabaseMigrations
 {

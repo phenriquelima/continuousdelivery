@@ -1,5 +1,5 @@
 {
-  "name": "henrique/gdes",
+  "name": "phenriquelima/gdes",
   "description": "Continuous Delivery Feature",
   "minimum-stability": "stable",
   "license": "MIT",
@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Source\\": "source/"
+      "PHenriqueLima\\ContinuousDelivery\\": "source/"
     }
   },
   "require": {

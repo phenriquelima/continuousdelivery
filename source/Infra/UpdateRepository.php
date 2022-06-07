@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Source\Infra;
+namespace PHenriqueLima\ContinuousDelivery\Infra;
 
-use Source\Controller\ContinuousDelivery;
-use Source\Infra\Contracts\IUpdateRepository;
+use PHenriqueLima\ContinuousDelivery\Controller\ContinuousDelivery;
+use PHenriqueLima\ContinuousDelivery\Infra\Contracts\IUpdateRepository;
 
 class UpdateRepository implements IUpdateRepository
 {

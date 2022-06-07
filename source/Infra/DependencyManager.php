@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Source\Infra;
+namespace PHenriqueLima\ContinuousDelivery\Infra;
 
-use Source\Controller\ContinuousDelivery;
-use Source\Infra\Contracts\IDependencyManager;
+use PHenriqueLima\ContinuousDelivery\Controller\ContinuousDelivery;
+use PHenriqueLima\ContinuousDelivery\Infra\Contracts\IDependencyManager;
 
 class DependencyManager implements IDependencyManager
 {
