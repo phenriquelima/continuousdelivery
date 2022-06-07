@@ -1,0 +1,22 @@
+{
+  "name": "henrique/gdes",
+  "description": "Continuous Delivery Feature",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Henrique Lima",
+      "email": "phjlima@uefs.br"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "ext-pdo": "*",
+    "vlucas/phpdotenv": "^5.3"
+  }
+}
