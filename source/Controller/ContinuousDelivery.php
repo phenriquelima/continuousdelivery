@@ -10,6 +10,9 @@ use PHenriqueLima\ContinuousDelivery\View\Presentation;
 class ContinuousDelivery
 {
 
+    const WINDOWS = 1;
+    const LINUX = 0;
+
     public static $dependencyManager = true;
     public static $databaseMigrations = true;
     public static $updateRepository = true;
@@ -39,6 +42,10 @@ class ContinuousDelivery
             'databaseMigrations' => self::$databaseMigrations,
             'updateRepository' => self::$updateRepository
         ];
+    }
+
+    public static function checkOS() {
+        return (stripos(PHP_OS, "WIN") === 0)? self::WINDOWS : self::LINUX;
     }
     
     
