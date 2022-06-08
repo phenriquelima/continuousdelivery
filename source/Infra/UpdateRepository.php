@@ -11,10 +11,6 @@ class UpdateRepository implements IUpdateRepository
 
     public function update(string $secureLink)
     {
-        $output = [];
-        $returnCode = null;
-        exec("$secureLink 2>&1", $output, $returnCode);
-        return $output;
-    
+        return shell_exec('cd ' . ContinuousDelivery::$baseUrl . ' && ' . $secureLink . ' 2>&1');
     }
 }
