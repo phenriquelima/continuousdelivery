@@ -11,6 +11,11 @@ class DependencyManager implements IDependencyManager
 
     public function install(string $command)
     {
-        return shell_exec('export COMPOSER_HOME="$HOME/.config/composer" && cd ' . ContinuousDelivery::$baseUrl . ' && ' . $command . ' 2>&1');
+        return
+            ContinuousDelivery::OSisLinux() ?
+            
+            shell_exec('export COMPOSER_HOME="$HOME/.config/composer" && cd ' . ContinuousDelivery::$baseUrl . ' && ' . $command . ' 2>&1') :
+
+            shell_exec('cd ' . ContinuousDelivery::$baseUrl . ' && ' . $command . ' 2>&1');
     }
 }

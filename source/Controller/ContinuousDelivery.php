@@ -44,9 +44,16 @@ class ContinuousDelivery
         ];
     }
 
-    public static function checkOS() {
+    private static function checkOS() {
         return (stripos(PHP_OS, "WIN") === 0)? self::WINDOWS : self::LINUX;
     }
+
+    public static function OSisLinux()
+    {
+        return self::checkOS() == self::LINUX;
+    }
+
+    
     
     
     
