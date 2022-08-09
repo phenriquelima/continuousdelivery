@@ -19,7 +19,7 @@ With this component you can run three stages to delivery your application:
 ## Instalation: ##
 
 ```
-composer require phenriquelima/continuousdelivery
+composer require phenriquelima/continuousdelivery:dev-main
 
 ```
 
