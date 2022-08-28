@@ -16,7 +16,7 @@ With this component you can run three stages to delivery your application:
 2. Run composer install or compose update
 3. Run Migrations ex.: 'php artisan migrate or vendor/bin/phinx migrate'
 
-## Instalation: ##
+## Installation: ##
 
 ```
 composer require phenriquelima/continuousdelivery:dev-main
