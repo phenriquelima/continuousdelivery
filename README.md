@@ -29,38 +29,38 @@ composer require phenriquelima/continuousdelivery:dev-main
 If you are using Laravel or any framework or route component, make a route and run a callback or controller method from that following this instructions:
 
 1. Define your static baseURL variable (must be the application root url)
-2. Run the class static method "call" and set up three params as bellow:
+2. Create a ContinuousDelivery class instance with four params as bellow:
+   - the base path url (where the commands will be executed)
    - the secure URL to update your repository
    - code to run migrations
-   - code to install composer dependencies 
+   - code to install dependencies 
 
 ```
 use PHenriqueLima\ContinuousDelivery\Controller\ContinuousDelivery;
 
  Route::get('/pull', function(){
    
-    ContinuousDelivery::$baseUrl = '/var/www/vacinacao/';
-    ContinuousDelivery::call(
+    $continuousDelivery = new ContinuousDelivery(
+        '/var/www/vacinacao/',
         'git pull https://phenriquelima:yourSecureTokenProvideByGithub@github.com/AccountName/RepositoryName',
         'php artisan migrate',
-        'composer install --no-autoloader'  
-    );
+        'composer install --no-autoloader'
+        );
     
 });
 ```
 
 3. If you want to see the component config run:
 ```
-echo ContinuousDelivery::settings();
+var_dump($continuousDelivery->settings());
 ```
-- This method return the settings status
+- This method return the array settings status
 
 4. If you want to disabled some of three stage to update execute:
 
-- ContinuousDelivery::$dependencyManager = false;
-- ContinuousDelivery::$databaseMigrations = false;
-- ContinuousDelivery::$updateRepository = false;
-
+- ContinuousDelivery::instance()::$databaseMigrations = false;
+- ContinuousDelivery::instance()::$dependencyManager = false;
+- ContinuousDelivery::instance()::$updateRepository = false;
 
 
 ## Warning ##
