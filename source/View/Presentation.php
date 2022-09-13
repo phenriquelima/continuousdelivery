@@ -2,11 +2,12 @@
 
 namespace PHenriqueLima\ContinuousDelivery\View;
 
+use PHenriqueLima\ContinuousDelivery\View\Contracts\IAdapter;
 
-class Presentation
+class Presentation implements IAdapter
 {
 
-    public function __construct($content)
+    public function __construct(array $content)
     {
         header('Content-Type: application/json; charset=utf-8');
         echo json_encode($content);

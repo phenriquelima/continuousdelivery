@@ -19,8 +19,10 @@ class ContinuousDelivery
         $git = new UpdateRepository;
 
         // Inject dependencies as parameters to Operation Class and execute the call method
-        $continuousDelivery = new ContinuousDeliveryOperation($composer, $migrate, $git);
-        $continuousDelivery->call($secureLinkUpdateRepository, $migrationCommand, $dependencyManagerCommand);
+        $continuousDeliveryOperation = new ContinuousDeliveryOperation($composer, $migrate, $git);
+       $continuousDeliveryOperation->call($secureLinkUpdateRepository, $migrationCommand, $dependencyManagerCommand);
+        
+        
         
     }
 

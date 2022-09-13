@@ -5,7 +5,9 @@ namespace PHenriqueLima\ContinuousDelivery\Controller;
 use PHenriqueLima\ContinuousDelivery\Infra\Contracts\IDatabaseMigrations;
 use PHenriqueLima\ContinuousDelivery\Infra\Contracts\IDependencyManager;
 use PHenriqueLima\ContinuousDelivery\Infra\Contracts\IUpdateRepository;
+use PHenriqueLima\ContinuousDelivery\View\Contracts\IAdapter;
 use PHenriqueLima\ContinuousDelivery\View\Presentation;
+
 
 class ContinuousDeliveryOperation
 {
@@ -21,17 +23,16 @@ class ContinuousDeliveryOperation
     public $migrations;
     public $repository;
     public $depencencies;
-
+    
     public function __construct(IDependencyManager $dependencyManager, IDatabaseMigrations $databaseMigrations, IUpdateRepository $updateRepository)
     {
         $this->migrations = $databaseMigrations;
         $this->repository = $updateRepository;
         $this->dependencies = $dependencyManager;
-     
     }
 
 
-    public function call($secureLinkUpdateRepository, $migrationCommand, $dependencyManagerCommand)
+    public function call($secureLinkUpdateRepository, $migrationCommand, $dependencyManagerCommand) : IAdapter
     {
 
         $response = [
